@@ -1,0 +1,11 @@
+{
+    "short_name": "Finished Item Hyper",
+    "name": "Finished Item Hyper",
+    "description": "Gives you a positive visual feedback everytime you complete a task!",
+    "icons": [ ],
+    "start_url": "/",
+    "background_color": "#36C0B5",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#36C0B5"
+}
