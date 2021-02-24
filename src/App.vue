@@ -20,19 +20,122 @@
   import Vue from 'vue';
   import VueConfetti from 'vue-confetti';
 
+
   Vue.use(VueConfetti);
 
   export default {
     name: 'App',
     data() {
       return {
-        counter: 0
+        counter: 0,
+        confettiType: [
+          {
+            particles: [
+              {
+                type: 'circle',
+                dropRate: 15
+              }
+            ],
+            defaultColors: [
+              'DodgerBlue', 
+              'OliveDrab', 
+              'Gold', 
+              'pink', 
+              'SlateBlue', 
+              'lightblue', 
+              'Violet', 
+              'PaleGreen', 
+              'SteelBlue', 
+              'SandyBrown', 
+              'Chocolate', 
+              'Crimson'
+            ]
+          },
+          {
+            particles: [
+              {
+                type: 'circle',
+                dropRate: 15
+              },
+              {
+                type: 'rect',
+                dropRate: 15
+              }
+            ],
+            defaultColors: [
+              'DodgerBlue', 
+              'OliveDrab', 
+              'Gold', 
+              'pink', 
+              'SlateBlue', 
+              'lightblue', 
+              'Violet', 
+              'PaleGreen', 
+              'SteelBlue', 
+              'SandyBrown', 
+              'Chocolate', 
+              'Crimson'
+            ]
+          },
+          {
+            particles: [
+              {
+                type: 'rect',
+                dropRate: 15
+              }
+            ],
+            defaultColors: [
+              'DodgerBlue', 
+              'OliveDrab', 
+              'Gold', 
+              'pink', 
+              'SlateBlue', 
+              'lightblue', 
+              'Violet', 
+              'PaleGreen', 
+              'SteelBlue', 
+              'SandyBrown', 
+              'Chocolate', 
+              'Crimson'
+            ]
+          },
+          {
+            particles: [
+              {
+                type: 'heart',
+                size: 20,
+                dropRate: 15
+              },
+              {
+                type: 'circle',
+                size: 10,
+                dropRate: 15
+              },
+            ],
+            defaultColors: [
+              'DodgerBlue', 
+              'OliveDrab', 
+              'Gold', 
+              'pink', 
+              'SlateBlue', 
+              'lightblue', 
+              'Violet', 
+              'PaleGreen', 
+              'SteelBlue', 
+              'SandyBrown', 
+              'Chocolate', 
+              'Crimson'
+            ],
+          }
+        ]
       }
     },
     methods: {
       addItem: function() {
         this.counter += 1;
-        this.startConfetti()
+        var randomIndex = Math.floor(Math.random() * this.confettiType.length);
+        this.startConfetti(this.confettiType[randomIndex]);
+        
         setTimeout(() => this.stopConfetti(), 1500);
         
       },
@@ -42,13 +145,14 @@
       resetCount: function() {
         this.counter = 0;
       },
-      startConfetti() {
-        this.$confetti.start();
+      startConfetti(confettiType) {
+     
+        this.$confetti.start(confettiType);
       },
 
       stopConfetti() {
         this.$confetti.stop();
-      },
+      }
     },
     computed: {
       countStarted: function(){
