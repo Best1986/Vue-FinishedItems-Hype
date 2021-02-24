@@ -7,8 +7,8 @@
           {{counter}}
         </div>
         <div class="count-btn">
-          <button class="btn-default" @click="addItem">Item finished</button>
-          <button v-show="countStarted" class="btn-default btn-outline" @click="removeItem">Remove item</button>          
+          <button class="btn-default" @click="addItem">I finished something!</button>
+          <button v-show="countStarted" class="btn-default btn-outline" @click="removeItem">Meh, remove one</button>          
           <button v-show="countStarted" class="btn-default btn-no-outline" @click="resetCount">Reset counter</button>  
         </div>
       </div>
