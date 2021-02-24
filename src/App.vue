@@ -32,8 +32,7 @@
           {
             particles: [
               {
-                type: 'circle',
-                dropRate: 15
+                type: 'circle'
               }
             ],
             defaultColors: [
@@ -54,12 +53,10 @@
           {
             particles: [
               {
-                type: 'circle',
-                dropRate: 15
+                type: 'circle'
               },
               {
-                type: 'rect',
-                dropRate: 15
+                type: 'rect'
               }
             ],
             defaultColors: [
@@ -80,8 +77,7 @@
           {
             particles: [
               {
-                type: 'rect',
-                dropRate: 15
+                type: 'rect'
               }
             ],
             defaultColors: [
@@ -103,13 +99,11 @@
             particles: [
               {
                 type: 'heart',
-                size: 20,
-                dropRate: 15
+                size: 20
               },
               {
                 type: 'circle',
-                size: 10,
-                dropRate: 15
+                size: 10
               },
             ],
             defaultColors: [
