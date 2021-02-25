@@ -1,7 +1,7 @@
 {
-    "short_name": "Finished Item Hyper",
-    "name": "Finished Item Hyper",
-    "description": "Gives you a positive visual feedback everytime you complete a task!",
+    "short_name": "Hype-To-Go",
+    "name": "Hype-To-Go",
+    "description": "Hype yourself where ever go and whatever you do!",
     "icons": [ ],
     "start_url": "/",
     "background_color": "#36C0B5",

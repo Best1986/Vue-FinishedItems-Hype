@@ -1,4 +1,4 @@
-# vue-ticketcount-tracker
+# Hype-To-Go
 A small and simple vue hype app with which you can count your finished tasks.
 
 ## Project setup
