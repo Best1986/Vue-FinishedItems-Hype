@@ -44,6 +44,7 @@
     methods: {
       setActiveBlock(elementID) {
         this.activeElement = elementID;
+        showOptions = !showOptions
       },
       isActiveBlock(elementID) {        
         if(this.activeElement == elementID) return true;
@@ -97,11 +98,6 @@ main {
   border-radius: 5px;
   cursor: pointer;
   margin-bottom: 10px;
-  margin-right: 8px;
-}
-
-.btn:last-child {
-  margin-right: 0;
 }
 
 .btn-round {
@@ -156,5 +152,12 @@ button:focus {
   font-size: 2.2em;
   opacity: 0.7;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 680px) {
+  .options {
+    top: 5px;
+    right: 5px;
+  }
 }
 </style>
