@@ -154,10 +154,15 @@ button:focus {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 680px) {
+/* TODO: setup options sizing */
+@media only screen and (max-width: 768px) {
   .options {
-    top: 5px;
-    right: 5px;
+    top: 0px import !important;
+    right: 5px !important;
+  }
+
+  .options.option-btns {
+    top: 55px !important;
   }
 }
 </style>
