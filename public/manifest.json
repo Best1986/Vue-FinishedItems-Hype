@@ -2,7 +2,28 @@
     "short_name": "Hype-To-Go",
     "name": "Hype-To-Go",
     "description": "Hype yourself where ever go and whatever you do!",
-    "icons": [ ],
+    "icons": [ 
+        {
+        "src": "/assets/images/apple-touch-icon-72x72.png",
+        "sizes": "72x72",
+        "type": "image/png"
+        }, 
+        {
+        "src": "/assets/images/favicon-96x96.png",
+        "sizes": "96x96",
+        "type": "image/png"
+        }, 
+        {
+        "src": "/assets/images/mstile-144x144.png",
+        "sizes": "144x144",
+        "type": "image/png"
+        }, 
+        {
+        "src": "/assets/images/favicon-196x196.png",
+        "sizes": "196x196",
+        "type": "image/png"
+        }
+    ],
     "start_url": "/",
     "background_color": "#36C0B5",
     "display": "standalone",

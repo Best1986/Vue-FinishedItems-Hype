@@ -12,6 +12,9 @@
         <!-- game controls -->
         <div id="controls">
             <button id="punch" class="btn" v-show="!ended" v-on:click="punch">Punch</button>
+            <div class="ko-container" v-show="ended">
+                <p>KNOCK OUT!</p>
+            </div>
             <button id="reset" class="btn btn-outline" v-on:click="restart">Reset</button>
         </div>
     </section>
@@ -66,4 +69,9 @@ export default {
         border-radius: 5px;
         background: crimson;
     }
+
+    .ko-container {
+        padding: 15px 0;
+    }
+
 </style>

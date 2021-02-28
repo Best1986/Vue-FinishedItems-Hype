@@ -1,23 +1,28 @@
 <template>
-  <div id="app">
+  <div id="app">    
+    <div v-if="showOptions" class="options option-btns">
+        <button id="item-counter" @click="setActiveBlock('item-counter')" class="btn btn-round mr-s">
+          <img src="/assets/images/plusone.svg" alt="Counter section" class="icon" />
+        </button>
+        <br>
+        <button id="frustration" @click="setActiveBlock('item-frustration')" class="btn btn-round">
+          <img src="/assets/images/frustrated.svg" alt="Frustration section" class="icon" />
+        </button>
+        <!-- <button id="music" @click="setActiveBlock('item-music')" class="btn btn-round">
+          <img src="/assets/images/music.svg" alt="Music section" class="icon" />
+        </button> -->
+    </div>
     <main>
       <count-block v-show="isActiveBlock('item-counter')"></count-block>
       <frustration-block v-show="isActiveBlock('item-frustration')"></frustration-block>
     
-      <div  class="options"> <!-- v-if="!showOptions" -->
+      <div class="options"> <!-- v-if="!showOptions" -->
         <button @click="showOptions = !showOptions" title="show option buttons" class="options-toggle">...</button>
       </div>
-
-      <div v-if="showOptions" class="options option-btns">
-          <button id="item-counter" @click="setActiveBlock('item-counter')" class="btn btn-round mr-s">
-            <img src="/assets/images/plusone.svg" alt="Counter section" class="icon" />
-          </button>
-          <br>
-          <button id="frustration" @click="setActiveBlock('item-frustration')" class="btn btn-round">
-            <img src="/assets/images/frustrated.svg" alt="Frustration section" class="icon" />
-          </button>
+      <div class="logo-container">
+        <a href="/" title="To startpage"><img src="/assets/images/plusone.svg" alt="logo" class="logo" /></a>
       </div>
-    </main>
+    </main>    
   </div> 
 </template>
 
@@ -44,7 +49,7 @@
     methods: {
       setActiveBlock(elementID) {
         this.activeElement = elementID;
-        showOptions = !showOptions
+        this.showOptions = !this.showOptions
       },
       isActiveBlock(elementID) {        
         if(this.activeElement == elementID) return true;
@@ -61,6 +66,18 @@
   font-family: Avenir, Helvetica, Arial, sans-serif;
   box-sizing: border-box;
   letter-spacing: 1px;
+}
+
+.logo-container {
+  box-sizing: border-box;
+  margin: auto;
+  text-align: center; 
+}
+
+.logo-container img {
+  width: 40px;
+  opacity: 0.25;
+  padding: 5px;
 }
 
 main {
@@ -105,7 +122,6 @@ main {
   width: 50px;
   height: 50px;
   padding: 10px;
-  margin-right: 0;
 }
 
 .btn-round .icon {
@@ -135,12 +151,12 @@ button:focus {
   margin: 10px auto;
   text-align: center;
   position: absolute;
-  top: 10px;
+  top: -10px;
   right: 10px;
 }
 
 .options.option-btns {
-  top: 60px !important;
+  top: 55px !important;
 }
 
 .options-toggle {
@@ -157,12 +173,12 @@ button:focus {
 /* TODO: setup options sizing */
 @media only screen and (max-width: 768px) {
   .options {
-    top: 0px import !important;
     right: 5px !important;
   }
 
-  .options.option-btns {
-    top: 55px !important;
+  .btn-round {
+    width: 55px;
+    height: 55px;
   }
 }
 </style>
