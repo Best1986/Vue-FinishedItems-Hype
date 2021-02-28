@@ -11,6 +11,7 @@
         </div>
     </section>
 </template>
+
 <script>
 export default {
     name: 'Counter',
@@ -145,7 +146,8 @@ export default {
     }
 }
 </script>
-<style scoped>
+
+<style lang="scss" scoped>
 .card .count-container {
   margin-top: 25px;
   font-size: 4em;

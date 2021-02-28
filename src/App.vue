@@ -59,7 +59,7 @@
   }
 </script>
 
-<style>
+<style lang="scss">
 * {
   margin: 0;
   padding: 0;
@@ -72,12 +72,12 @@
   box-sizing: border-box;
   margin: auto;
   text-align: center; 
-}
 
-.logo-container img {
-  width: 40px;
-  opacity: 0.25;
-  padding: 5px;
+  img {
+    width: 40px;
+    opacity: 0.25;
+    padding: 5px;
+  }
 }
 
 main {
@@ -97,12 +97,12 @@ main {
   text-align: center;
   box-shadow: 4px 0 8px rgba(0, 0, 0, 0.25);
   transition: easy 0.4ms;
-}
-
-.card h1 {
-  font-size: 1.4em;
-  font-weight: 500;
-  text-transform: uppercase;
+  
+  h1 {
+    font-size: 1.4em;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
 }
 
 .btn {
@@ -115,6 +115,19 @@ main {
   border-radius: 5px;
   cursor: pointer;
   margin-bottom: 10px;
+
+  .btn-outline {
+    background: transparent;
+    border: 2px solid #fdbb2d;
+  }
+
+  .btn-no-outline {
+    border-color: transparent;
+    background: transparent;
+    color: #4e4e4e;
+    font-weight: 400;
+    text-transform: lowercase;
+  }
 }
 
 .btn-round {
@@ -122,28 +135,15 @@ main {
   width: 50px;
   height: 50px;
   padding: 10px;
-}
 
-.btn-round .icon {
-  margin: auto;
-  opacity: 0.75;
+  .icon {
+    margin: auto;
+    opacity: 0.75;
+  }
 }
 
 button:focus {
   outline: none;
-}
-
-.btn.btn-outline {
-  background: transparent;
-  border: 2px solid #fdbb2d;
-}
-
-.btn.btn-no-outline {
-  border-color: transparent;
-  background: transparent;
-  color: #4e4e4e;
-  font-weight: 400;
-  text-transform: lowercase;
 }
 
 .options {
@@ -153,10 +153,10 @@ button:focus {
   position: absolute;
   top: -10px;
   right: 10px;
-}
 
-.options.option-btns {
-  top: 55px !important;
+  &.option-btns {
+    top: 50px !important;
+  }
 }
 
 .options-toggle {
@@ -170,7 +170,12 @@ button:focus {
   cursor: pointer;
 }
 
-/* TODO: setup options sizing */
+@media only screen and (min-width: 820px) {
+  .options {
+    right: 20%;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .options {
     right: 5px !important;

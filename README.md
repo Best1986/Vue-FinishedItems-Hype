@@ -23,3 +23,6 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### SCSS 
+See [VUE CLI SCSS](https://cli.vuejs.org/guide/css.html#automatic-imports)
