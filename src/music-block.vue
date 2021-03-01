@@ -11,7 +11,6 @@
         </div>
     </section>
 </template>
-
 <script>
 export default {
     name: 'Music',
@@ -22,7 +21,6 @@ export default {
     }
 }
 </script>
-
-<style lang="scss" scoped>
+<style scoped>
 
 </style>

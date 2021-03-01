@@ -11,7 +11,7 @@
         
         <!-- game controls -->
         <div id="controls">
-            <button id="punch" class="btn" v-show="!ended" v-on:click="punch">PUNCH IT!</button>
+            <button id="punch" class="btn" v-show="!ended" v-on:click="punch">Punch</button>
             <div class="ko-container" v-show="ended">
                 <p>KNOCK OUT!</p>
             </div>
@@ -19,7 +19,6 @@
         </div>
     </section>
 </template>
-
 <script>
 export default {
     name: 'frustration-block',
@@ -45,18 +44,17 @@ export default {
 	},
 }
 </script>
-
-<style lang="scss" scoped>
+<style scoped>
     #bag {
         height: 300px;
         margin: 0 auto;
         background: url('/assets/images/bag.png') center no-repeat;
         background-size: 45%;
+    }
 
-        .burst {
-            background: url('/assets/images/bag-burst.png') center no-repeat;
-            background-size: 45%;
-        }
+    #bag.burst {
+        background: url('/assets/images/bag-burst.png') center no-repeat;
+        background-size: 45%;
     }
 
     #bag-health {
@@ -64,15 +62,16 @@ export default {
         border: 2px solid #3e3e3e;
         margin: 0 auto 20px auto;
         border-radius: 5px;
+    }
 
-        div {
-            height: 20px;
-            border-radius: 5px;
-            background: crimson;
-        }
+    #bag-health div {
+        height: 20px;
+        border-radius: 5px;
+        background: crimson;
     }
 
     .ko-container {
         padding: 15px 0;
     }
+
 </style>
