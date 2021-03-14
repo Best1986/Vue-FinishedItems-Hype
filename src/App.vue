@@ -8,6 +8,10 @@
         <button id="frustration" @click="setActiveBlock('item-frustration')" class="btn btn-round">
           <img src="/assets/images/frustrated.svg" alt="Frustration section" class="icon" />
         </button>
+        <br>
+        <button id="breathing" @click="setActiveBlock('item-breathing')" class="btn btn-round">
+          <img src="/assets/images/breath-temp.svg" alt="Breathing section" class="icon" />
+        </button>
         <!-- <button id="music" @click="setActiveBlock('item-music')" class="btn btn-round">
           <img src="/assets/images/music.svg" alt="Music section" class="icon" />
         </button> -->
@@ -15,6 +19,7 @@
     <main>
       <count-block v-show="isActiveBlock('item-counter')"></count-block>
       <frustration-block v-show="isActiveBlock('item-frustration')"></frustration-block>
+      <breathing-block v-show="isActiveBlock('item-breathing')"></breathing-block>
     
       <div class="options"> <!-- v-if="!showOptions" -->
         <button @click="showOptions = !showOptions" title="show option buttons" class="options-toggle">...</button>
@@ -31,13 +36,15 @@
   import VueConfetti from 'vue-confetti';
   import CountBlock from './counter-block.vue';
   import FrustrationBlock from './frustration-block.vue';
+  import BreathingBlock from './breathing-block.vue';
 
   Vue.use(VueConfetti);
 
   export default {
     components: {
       'count-block': CountBlock,
-      'frustration-block': FrustrationBlock
+      'frustration-block': FrustrationBlock,
+      'breathing-block': BreathingBlock,
     },
     name: 'App',
     data() {
