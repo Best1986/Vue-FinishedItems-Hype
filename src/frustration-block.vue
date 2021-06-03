@@ -35,7 +35,9 @@ export default {
 
 			if(this.health <= 0){
 				this.ended = true;
-			}		
+			}	
+			
+			//transform-origin: 80px 50px;
 		},
 		restart: function(){
 			this.health = 100;
